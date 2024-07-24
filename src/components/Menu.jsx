@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu as MenuIcon, X } from "lucide-react";
+import Categories from "@/components/Categories";
 
 const iconVariants = {
-  initial: { scale: 0 },
+  initial: { scale: 1 },
   animate: { scale: 1 },
   exit: { scale: 0 },
 };
@@ -25,11 +26,9 @@ const Menu = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
-    if (!isMenuOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
+    isMenuOpen
+      ? document.body.classList.remove("overflow-hidden")
+      : document.body.classList.add("overflow-hidden");
   };
 
   return (
@@ -64,14 +63,12 @@ const Menu = () => {
         initial="closed"
         animate={isMenuOpen ? "open" : "closed"}
         variants={menuVariants}
-        className="fixed left-0 top-20 h-[calc(100vh-80px)] w-full bg-red-300 px-3 text-black"
+        className="absolute left-0 top-20 h-[calc(100dvh-80px)] w-full overflow-y-auto bg-white px-3 text-black"
       >
-        <ul>
-          <li>Шоломи</li>
-          <li>Плитоноски</li>
-          <li>Тактичний одяг</li>
-          <li>Бронепластини</li>
-        </ul>
+        <Categories
+          listClasses="min-h-full flex flex-col gap-4 py-8"
+          itemClasses="font-medium text-lg"
+        />
       </motion.div>
     </>
   );
