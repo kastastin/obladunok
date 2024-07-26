@@ -1,7 +1,10 @@
 import Slider from "@/components/Slider";
+import Accordion from "@/components/Accordion";
 import ProductSection from "@/components/ProductSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import ChooseUsSection from "@/components/ChooseUsSection";
+
+import { faqData } from "@/constants/faq";
 import { products } from "@/constants/products";
 
 const Home = () => {
@@ -32,6 +35,8 @@ const Home = () => {
       />
 
       <AboutUsSection />
+
+      <Accordion data={faqData} />
     </main>
   );
 };
