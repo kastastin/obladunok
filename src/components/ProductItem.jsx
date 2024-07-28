@@ -7,13 +7,13 @@ const ProductItem = ({ product }) => {
       className={`relative inline-flex h-[360px] w-[calc(100vw/2-12px)] cursor-pointer flex-col items-center rounded-lg shadow-[0_1px_5px_rgb(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgb(0,0,0,0.2)] ${!product.isAvailable && "opacity-70"}`}
     >
       {/* Image */}
-      <div className="relative h-[182px] w-full scale-75">
+      <div className="relative h-[calc(100vw/2)] w-full scale-75">
         <Image
           src={product.img}
           alt={product.title}
           fill
           sizes="100%"
-          className="object-cover"
+          className="object-contain"
         />
       </div>
 
