@@ -4,7 +4,7 @@ import ProductList from "@/components/ProductList";
 
 const ProductSection = ({ title, productList, isRecommended }) => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 lg:mt-10">
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">{title}</h3>
 

@@ -4,7 +4,7 @@ import { Info, ShoppingCart } from "lucide-react";
 const ProductItem = ({ product }) => {
   return (
     <div
-      className={`relative inline-flex h-[360px] w-[calc(100vw/2-12px)] cursor-pointer flex-col items-center rounded-lg shadow-[0_1px_5px_rgb(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgb(0,0,0,0.2)] ${!product.isAvailable && "opacity-70"}`}
+      className={`relative inline-flex h-[360px] w-[calc(100vw/2-12px)] cursor-pointer flex-col items-center rounded-lg shadow-[0_1px_5px_rgb(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgb(0,0,0,0.2)] sm:h-[390px] sm:w-[calc(100vw/2-24px)] lg:sm:w-[calc(100vw/3-43px)] lg:h-[430px] ${!product.isAvailable && "opacity-70"}`}
     >
       {/* Image */}
       <div className="relative h-[calc(100vw/2)] w-full scale-75">
@@ -18,7 +18,7 @@ const ProductItem = ({ product }) => {
       </div>
 
       {/* Title */}
-      <span className="mt-2 px-2 text-center text-base font-medium">
+      <span className="mt-2 px-2 text-center text-base font-medium sm:px-4 lg:px-8">
         {product.title}
       </span>
 

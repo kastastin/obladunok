@@ -9,7 +9,7 @@ import { products } from "@/constants/products";
 
 const Home = () => {
   return (
-    <main className="translate-y-20 px-2">
+    <main className="translate-y-20 px-2 sm:px-4 lg:px-8">
       <Slider />
 
       <ProductSection title="Популярні товари" productList={products} />

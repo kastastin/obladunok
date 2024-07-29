@@ -65,7 +65,7 @@ const Slider = () => {
 
   return (
     <div
-      className="mt-5"
+      className="mt-5 lg:mt-8"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -93,13 +93,13 @@ const Slider = () => {
 
         {/* Arrows */}
         <div
-          className="absolute left-2 top-1/2 z-10 -translate-y-1/2 cursor-pointer bg-[#f4a137cc] p-1 px-px opacity-80"
+          className="absolute left-2 top-1/2 z-10 -translate-y-1/2 cursor-pointer bg-[#f4a137cc] p-1 px-px opacity-80 lg:p-2"
           onClick={prevSlide}
         >
           <ChevronLeft color="#fff" />
         </div>
         <div
-          className="absolute right-2 top-1/2 z-10 -translate-y-1/2 cursor-pointer bg-[#f4a137cc] p-1 px-px opacity-70"
+          className="absolute right-2 top-1/2 z-10 -translate-y-1/2 cursor-pointer bg-[#f4a137cc] p-1 px-px opacity-70 lg:p-2"
           onClick={nextSlide}
         >
           <ChevronRight color="#fff" />
@@ -107,11 +107,11 @@ const Slider = () => {
       </div>
 
       {/* Circles */}
-      <div className="mt-2 hidden justify-center md:flex">
+      <div className="mt-2 hidden justify-center md:flex lg:mt-3">
         {slides.map((_, i) => (
           <div
             key={i}
-            className={`mx-1 size-2 cursor-pointer rounded-full bg-[#f4a137cc] ${
+            className={`mx-1 size-2 cursor-pointer rounded-full bg-[#f4a137cc] lg:size-3 ${
               i === currentSlide ? "opacity-100" : "opacity-50"
             }`}
             onClick={() => setCurrentSlide(i)}
